@@ -1,21 +1,24 @@
 
 
 .bgImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../../assets/images/kitchen.jpeg');
+  background-size: cover;
+  background-position: 50% 85%;
   width: 100%;
-  height: 450px;
+  height: 550px;
   object-fit: fill;
   z-index: 1;
   }
 
 .logo {
-  background-color: gray;
+  background-color: rgb(98, 100, 98, .7);
   z-index: 2;
-  position: absolute;
-  top: 9%;
-  left: 8%;
   width: 120px;
   height: 120px;
-}
+} 
 
  .logoOne {
   font-family: 'cursive';
@@ -38,15 +41,20 @@
  } 
 
  .slogan {
+  justify-content: start;
   font-family: 'cursive';
+  flex: 2 2 auto;
   font-size: 60px;
   font-weight: 300;
   color: aliceblue;
   z-index: 2;
-  position: absolute;
-  top: 350px;
-  text-align: center;
-
+  /* position: absolute;
+  top: 350px; */
+  align-items: end;
  }
 
- 
+  li {
+    list-style-type: none;
+    justify-content: center;
+    padding: 0px 10px;
+  }
