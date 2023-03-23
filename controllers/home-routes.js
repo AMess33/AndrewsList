@@ -1,21 +1,12 @@
 const router = require('express').Router();
-// require models
+const {Category, User} = require('../models');
 const withAuth = require('../utils/auth');
 
 // homepage/landing page route
 
 router.get('/', async (req, res) => {
     try {
-      // TODO: What are we loading? Change this block
-      const categoryData = await Category.findAll({
-        // We will decide what we want to include later
-        // include: [
-        //   {
-        //     model: Category,
-        //     attributes: ['name'],
-        //   },
-        // ],
-      });
+      const categoryData = await Category.findAll({});
   
       // TODO: Serialize data so the template can read it
       const categories = categoryData.map((category) => category.get({ plain: true }));
@@ -38,7 +29,7 @@ router.get('/profile', withAuth, async (req, res) => {
     //TODO: go through and change what is needed such as Project
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: Project }],
+        include: [{ model: User }],
       });
   
       const user = userData.get({ plain: true });
@@ -56,7 +47,8 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-      res.redirect('/profile');
+        // do we want to actually redirect to home instead of profile?
+      res.redirect('profile');
       return;
     }
   
