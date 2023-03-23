@@ -37,6 +37,12 @@ Project.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    status: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      // Open, in progress, completed
+      // 1=open, 2=In progress, 3=completed
+    },
     client_id: {
       type: DataTypes.INTEGER,
       references: {
