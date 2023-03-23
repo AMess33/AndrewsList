@@ -32,7 +32,11 @@ Client.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    address: {
+    username: {
+      type: DataTypes.string,
+      allowNull: false,
+    },
+    password: {
       type: DataTypes.string,
       allowNull: false,
     },

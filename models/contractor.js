@@ -32,6 +32,14 @@ Contractor.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    username: {
+      type: DataTypes.string,
+      allowNull: false,
+    },
+    password: {
+      type: DataTypes.string,
+      allowNull: false,
+    },
     rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
