@@ -19,22 +19,18 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    address: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // address: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     email: {
       type: DataTypes.string,
       allowNull: false,
     },
-    phonenumber: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    username: {
-      type: DataTypes.string,
-      allowNull: false,
-    },
+    // phonenumber: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
     password: {
       type: DataTypes.string,
       allowNull: false,
