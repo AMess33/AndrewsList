@@ -1,0 +1,17 @@
+
+
+
+<div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+    <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+        {{#each category as |categories|}}
+            <div class="col">
+                <div class="card h-100 shadow-md"> <img src="{{ category.filename }}" class="card-img-top" alt="{{ category.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Select the right {{ category.name }} style for you</h5>
+                        <div class="text-center my-4"> <a href="#" class="btn btn-warning">View {{ category.name }} Products</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}    
+    </div>
+</div>    
