@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Client extends Model {}
+class User extends Model {}
 
-Client.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -19,25 +19,24 @@ Client.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    address: {
-      //   type: DataTypes.DATE,
-      //   allowNull: false,
-      //   defaultValue: DataTypes.NOW,
-    },
+    // address: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     email: {
       type: DataTypes.string,
       allowNull: false,
     },
-    phonenumber: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    username: {
-      type: DataTypes.string,
-      allowNull: false,
-    },
+    // phonenumber: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
     password: {
       type: DataTypes.string,
+      allowNull: false,
+    },
+    contractor: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
   },
@@ -47,8 +46,8 @@ Client.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "client",
+    modelName: "User",
   }
 );
 
-module.exports = Client;
+module.exports = User;
