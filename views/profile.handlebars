@@ -4,10 +4,9 @@
         <div class="col-4">
             {{#each projects as |project|}}
             <div class="card h-30 shadow-sm"> <img src="{{ product.filename }}" class="card-img-top " alt="...">
-                <div class="label-top shadow-sm">${{ product.price }}/sqf</div>
                 <div class="card-body">
-                    <h4 class="card-title text-center">{{ product.name }}</h4>
-                    <h6 class="text-center">{{ product.description }}</h6>
+                    <h4 class="card-title text-center">{{ project.name }}</h4>
+                    <h6 class="text-center">{{ project.description }}</h6>
                     <div class="text-center my-4"> <a href="#" class="btn btn-warning">Start Project</a>
                     </div>
                 </div>
@@ -15,11 +14,10 @@
             {{/each}}
         </div>
         <div class="col-8">
-            {{#each products as |product|}}
+            {{#each projects as |project|}}
             <div class="card h-30 shadow-sm"> <img src="{{ product.filename }}" class="card-img-top " alt="...">
-                <div class="label-top shadow-sm">${{ product.price }}/sqf</div>
                 <div class="card-body">
-                    <h4 class="card-title text-center">{{ product.name }}</h4>
+                    <h4 class="card-title text-center">{{ project.name }}</h4>
                     <h6 class="text-center">{{ product.description }}</h6>
                     <div class="text-center my-4"> <a href="#" class="btn btn-warning">Start Project</a>
                     </div>
