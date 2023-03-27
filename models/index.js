@@ -10,16 +10,16 @@ Category.hasMany(Product, {
 });
 
 Product.belongsTo(Category, {
-  foreignKey: "cat"
+  foreignKey: "cat",
 });
 
 //2. Product/Project Association (Many to Many)
-Product.belongsToMany(Project, { through: "" });
-Project.belongsToMany(Product, { through: "" });
+Product.belongsToMany(Project, { through: "ProjectProduct" });
+Project.belongsToMany(Product, { through: "ProjectProduct" });
 
 //3. Project/User Associaiton (Many to Many)
-User.belongsToMany(Project, { through: "" });
-Project.belongsToMany(User, { through: "" });
+User.belongsToMany(Project, { through: "UserProject" });
+Project.belongsToMany(User, { through: "UserProject" });
 
 //4. Bid/Project Associations (One to Many)
 Project.hasMany(Bid, {});
