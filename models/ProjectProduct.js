@@ -12,7 +12,7 @@ ProjectProduct.init(
       autoIncrement: true,
     },
     project: {},
-    products: {
+    product: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
