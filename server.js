@@ -32,6 +32,9 @@ const sess = {
 
 app.use(session(sess));
 
+// Add a static middleware for serving assets in the public folder
+app.use(express.static('public'));
+
 // Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
