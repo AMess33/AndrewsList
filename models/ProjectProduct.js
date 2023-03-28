@@ -11,11 +11,9 @@ ProjectProduct.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    project: {},
-    product: {
-      type: DataTypes.DATE,
+    projectName: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
   },
   {

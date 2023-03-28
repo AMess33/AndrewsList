@@ -24,7 +24,7 @@ User.init(
     //   allowNull: false,
     // },
     email: {
-      type: DataTypes.string,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     // phonenumber: {
@@ -32,7 +32,7 @@ User.init(
     //   allowNull: false,
     // },
     password: {
-      type: DataTypes.string,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     contractor: {

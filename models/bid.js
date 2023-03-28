@@ -27,24 +27,24 @@ Bid.init(
       allowNull: false,
     },
 
-    client_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "client",
+        model: "user",
         key: "id",
       },
     },
     contractor_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "contractor",
+        model: "user",
         key: "id",
       },
     },
     project_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "contractor",
+        model: "project",
         key: "id",
       },
     },
