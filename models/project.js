@@ -36,10 +36,11 @@ Project.init(
     status: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      setDefault: 1,
       // Open, in progress, completed
       // 1=open, 2=In progress, 3=completed
     },
-    client_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
