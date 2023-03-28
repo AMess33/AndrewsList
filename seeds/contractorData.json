@@ -1,0 +1,22 @@
+[
+  {
+    "first name": "Alan",
+    "last name": "Hornbaker",
+    "address": "1026 N Church St, Eudora, KS",
+    "email": "alan@hotmail.com",
+    "phone number": 7855519872,
+    "username": "AHornbaker",
+    "password": "Alan1991!",
+    "rating": 4.5
+  },
+  {
+    "first name": "Lawrence",
+    "last name": "Williams",
+    "address": "1026 135th St, Olathe, KS",
+    "email": "lawrence@hotmail.com",
+    "phone number": 9132628349,
+    "username": "LWillaims",
+    "password": "f345#%^",
+    "rating": 5
+  } 
+]
