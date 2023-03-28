@@ -18,7 +18,7 @@ Project.init(
     description: {
       type: DataTypes.STRING,
     },
-    products: {
+    product: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
