@@ -1,6 +1,7 @@
 <div class="container">
     <div class="row">
         <!-- {{if contractor === true}} -->
+        {{#if contractor === true}}
         <div class="col-4">
             {{#each projects as |project|}}
             <div class="card h-30 shadow-sm"> <img src="{{ product.filename }}" class="card-img-top " alt="...">
@@ -13,6 +14,7 @@
             </div>
             {{/each}}
         </div>
+        {{/if}}
         <div class="col-8">
             {{#each projects as |project|}}
             <div class="card h-30 shadow-sm"> <img src="{{ product.filename }}" class="card-img-top " alt="...">
