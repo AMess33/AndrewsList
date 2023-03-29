@@ -2,8 +2,8 @@ const { User } = require("../models");
 
 const userData = [
   {
-    "first name": "Eli",
-    "last name": "Pruneda",
+    first_name: "Eli",
+    last_name: "Pruneda",
     address: "1782 E. Johnson Ave, Kansas City, KS",
     email: "eli@hotmail.com",
     "phone number": 9135512727,
@@ -11,8 +11,8 @@ const userData = [
     password: "Eli100!",
   },
   {
-    "first name": "Andrew",
-    "last name": "Messer",
+    first_name: "Andrew",
+    last_name: "Messer",
     address: "1784 E. Johnson Ave, Kansas City, KS",
     email: "andrew@hotmail.com",
     "phone number": 9135516782,
