@@ -9,18 +9,18 @@ const userData = require("./userData");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  //   const users = await User.bulkCreate(userData, {
-  //     individualHooks: true,
-  //     returning: true,
-  //   });
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-  //   for (const project of projectData) {
-  //     await Project.create({
-  //       ...project,
-  //       user_id: users[Math.floor(Math.random() * users.length)].id,
-  //     });
-  //   }
+  for (const category of categoryData) {
+    await Category.create({
+      ...category,
+    });
+  }
 
+  const product = await Product.bulkCreate(productData);
   process.exit(0);
 };
 
