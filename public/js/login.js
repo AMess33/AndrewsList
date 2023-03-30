@@ -28,17 +28,24 @@ const signupFormHandler = async (event) => {
   // event.preventDefault();
 
   const firstName = document.querySelector("#first-name-signup").value.trim();
-  const lastName = document.querySelector("#ast-name-signup").value.trim();
+  const lastName = document.querySelector("#last-name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
-  const password = document.querySelector("#password-signup").value.trim();
+  const password = document.querySelector("#password-signup").value;
   const contractor = document.querySelector("#contractorCheck").checked;
   // const buisness = document.querySelector("#business")
   // const phone = document.querySelector("#phone")
+  console.log(firstName, lastName, email, password, contractor);
 
-  if (firstName && lastName && email && password && contractor) {
-    const response = await fetch("/api/users", {
+  if (firstName && lastName) {
+    const response = await fetch("/api/user", {
       method: "POST",
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password,
+        contractor,
+      }),
       headers: { "Content-Type": "application/json" },
     });
 
