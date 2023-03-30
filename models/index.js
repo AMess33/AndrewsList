@@ -9,7 +9,7 @@ Category.hasMany(Product, {
 });
 
 Product.belongsTo(Category, {
-  foreignKey: "cateogry_id",
+  foreignKey: "category_id",
 });
 
 //2. Product/Project Association (Many to Many)

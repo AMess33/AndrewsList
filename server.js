@@ -7,7 +7,7 @@ const routes = require("./controllers");
 const sequelize = require("./config/connection");
 // const datepicker = require("js-datepicker");
 
-require("./seeds/seed");
+// require("./seeds/seed");
 // const helpers = require("utils");
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
