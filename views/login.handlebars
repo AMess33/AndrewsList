@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <input type="text" id="las-name-signup" class="form-control" />
+                                            <input type="text" id="last-name-signup" class="form-control" />
                                             <label class="form-label">Last name</label>
                                         </div>
                                     </div>
@@ -58,22 +58,22 @@
                                 </div>
                                 <!-- Checkbox -->
                                 <div class="form-check d-flex justify-content-center mb-4">
-                                    <input class="form-check-input me-2" type="checkbox" onclick="isContractor()"
-                                        id="contractorCheck" unchecked />
+                                    <input class="form-check-input me-2" value="true" type="checkbox"
+                                        onclick="isContractor()" id="contractorCheck" unchecked />
                                     <label class="form-check-label">
                                         Are you a Contractor?
                                     </label>
                                 </div>
                                 <!-- if checkbox is checked display two more input fields -->
-                                <div class="form-outline mb-4" style="display: none;" id="company">
-                                    <input type="text" class="form-control" />
+                                {{!-- <div class="form-outline mb-4" style="display: none;" id="company">
+                                    <input type="text" id="business" class="form-control" />
                                     <label class="form-label">What is the name of your Buisness?</label>
                                 </div>
 
                                 <div class="form-outline mb-4" style="display: none;" id="phone">
-                                    <input type="text" class="form-control" />
+                                    <input type="text" id="phone" class="form-control" />
                                     <label class="form-label">Business Phone Number?</label>
-                                </div>
+                                </div> --}}
                                 <!-- Submit button -->
                                 <button onclick="signupFormHandler()" type="button"
                                     class="btn btn-primary btn-block mb-4">

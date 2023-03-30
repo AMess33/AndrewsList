@@ -18,10 +18,12 @@ Project.init(
     description: {
       type: DataTypes.STRING,
     },
-    product: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "product",
+        key: "id",
+      },
     },
     date_start: {
       type: DataTypes.DATE,

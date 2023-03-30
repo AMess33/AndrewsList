@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     // do we want to actually redirect to home instead of profile?
-    res.redirect("newProject");
+    res.redirect("profile");
     return;
   } else {
     res.redirect("login");

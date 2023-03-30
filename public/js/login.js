@@ -27,11 +27,15 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   // event.preventDefault();
 
-  const name = document.querySelector("#name-signup").value.trim();
+  const firstName = document.querySelector("#first-name-signup").value.trim();
+  const lastName = document.querySelector("#ast-name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
+  const contractor = document.querySelector("#contractorCheck").checked;
+  // const buisness = document.querySelector("#business")
+  // const phone = document.querySelector("#phone")
 
-  if (name && email && password) {
+  if (firstName && lastName && email && password && contractor) {
     const response = await fetch("/api/users", {
       method: "POST",
       body: JSON.stringify({ name, email, password }),
@@ -45,14 +49,6 @@ const signupFormHandler = async (event) => {
     }
   }
 };
-
-// document
-//   .querySelector(".login-form")
-//   .addEventListener("submit", loginFormHandler);
-
-// document
-//   .querySelector(".signup-form")
-//   .addEventListener("submit", signupFormHandler);
 
 function isContractor() {
   // Get the checkbox
