@@ -12,6 +12,7 @@ const userData = [
     last_name: "Messer",
     email: "andrew@hotmail.com",
     password: "password12345",
+    contractor: true,
   },
 ];
 
