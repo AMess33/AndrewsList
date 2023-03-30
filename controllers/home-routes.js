@@ -56,4 +56,13 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+// get Project Creation form route
+router.get("/newProject", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("newProject");
+    return;
+  }
+  res.render("newProject");
+});
+
 module.exports = router;
