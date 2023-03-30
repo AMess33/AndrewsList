@@ -4,7 +4,7 @@ const categoryData = [
   {
     name: "flooring",
     description: "Select the right flooring for you!",
-    filename: "./assets/images/flooring_examples.jpeg",
+    filename: "./public/images/flooring examples.jpeg",
   },
   {
     name: "countertops",
