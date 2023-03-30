@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Category, User, Product } = require("../models");
+const { Category, User, Product, Project } = require("../models");
 const withAuth = require("../utils/auth");
 
 // homepage/landing page route
@@ -28,15 +28,22 @@ router.get("/profile", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     //TODO: go through and change what is needed such as Project
+    const projectData = await Project.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       // include: [{ model: User }],
     });
 
     const user = userData.get({ plain: true });
+    const projects = projectData.map((project) => project.get({ plain: true }));
 
     res.render("profile", {
       ...user,
+      projects,
       logged_in: true,
     });
   } catch (err) {

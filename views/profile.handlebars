@@ -4,10 +4,11 @@
         </div>
         {{#if contractor}}
         <div class="col-4">
+            <h3>Projects Open for Bidding</h3>
             {{#each projects as |project|}}
-            <div class="card h-30 shadow-sm"> <img src="{{ product.filename }}" class="card-img-top " alt="...">
+            <div class="card h-30 shadow-sm">
                 <div class="card-body">
-                    <h4 class="card-title text-center">{{ project.name }}</h4>
+                    <h4 class="card-title text-center">{{ project.title }}</h4>
                     <h6 class="text-center">{{ project.description }}</h6>
                     <div class="text-center my-4"> <a href="#project" class="btn btn-warning">View Project</a>
                     </div>
@@ -17,11 +18,12 @@
         </div>
         {{/if}}
         <div class="col-8">
+            <h3 class="">Your Open Projects</h3>
             {{#each projects as |project|}}
-            <div class="card h-30 shadow-sm"> <img src="{{ product.filename }}" class="card-img-top " alt="...">
+            <div class="card h-30 shadow-sm">
                 <div class="card-body">
-                    <h4 class="card-title text-center">{{ project.name }}</h4>
-                    <h6 class="text-center">{{ product.description }}</h6>
+                    <h4 class="card-title text-center">{{ project.title }}</h4>
+                    <h6 class="text-center">{{ project.description }}</h6>
                     <div class="text-center my-4"> <a href="#project" class="btn btn-warning">View Project</a>
                     </div>
                 </div>
