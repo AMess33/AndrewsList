@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Category, User } = require("../models");
+const { Category, User, Product } = require("../models");
 const withAuth = require("../utils/auth");
 
 // homepage/landing page route
@@ -57,12 +57,17 @@ router.get("/login", (req, res) => {
 });
 
 // get Project Creation form route
-router.get("/newProject", async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect("login");
-    return;
+router.get("/newProject", withAuth, async (req, res) => {
+  try {
+    const productData = await Product.findAll({});
+    const products = productData.map((product) => product.get({ plain: true }));
+    res.render("newProject", {
+      products,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
   }
-  res.render("newProject");
 });
 
 module.exports = router;
