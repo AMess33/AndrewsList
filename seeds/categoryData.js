@@ -5,6 +5,7 @@ const categoryData = [
     name: "flooring",
     description: "Select the right flooring for you!",
     filename: "images/flooring-examples.jpeg",
+
   },
   {
     name: "countertops",
