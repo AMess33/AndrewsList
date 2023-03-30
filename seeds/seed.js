@@ -1,5 +1,11 @@
 const sequelize = require("../config/connection");
-const { Category, Product, User } = require("../models");
+const {
+  Category,
+  Product,
+  User,
+  ProjectProduct,
+  UserProject,
+} = require("../models");
 
 const categoryData = require("./categoryData");
 const productData = require("./productData");
@@ -14,13 +20,13 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const category of categoryData) {
-    await Category.create({
-      ...category,
-    });
-  }
+  const category = await Category.bulkCreate(categoryData);
 
   const product = await Product.bulkCreate(productData);
+
+  const productProduct = await ProjectProduct();
+
+  const UserProject = await UserProject();
   process.exit(0);
 };
 

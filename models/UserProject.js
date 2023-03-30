@@ -11,52 +11,15 @@ UserProject.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    client_id: {
+    project_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "client",
-        key: "id",
-      },
-    },
-    description: {
-      type: DataTypes.STRING,
-    },
-    products: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    date_start: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    date_completion: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    status: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      // Open, in progress, completed
-      // 1=open, 2=In progress, 3=completed
-    },
-    client_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
-    },
-    contractor_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
+        model: "project",
         key: "id",
       },
     },
   },
+
   {
     sequelize,
     timestamps: false,

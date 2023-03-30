@@ -5,7 +5,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const sequelize = require("./config/connection");
-const datepicker = require("js-datepicker");
+// const datepicker = require("js-datepicker");
 
 require("./seeds/seed");
 // const helpers = require("utils");
