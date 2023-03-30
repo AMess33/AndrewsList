@@ -57,12 +57,18 @@ router.get("/login", (req, res) => {
 });
 
 // get Project Creation form route
-router.get("/newProject", (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("newProject");
-    return;
+router.get("/newProject", async (req, res) => {
+  try {
+    if (!req.session.logged_in) {
+      console.log(req.session.logged_in);
+      res.redirect("login");
+      return;
+    }
+    res.render("newProject");
+    res.status(200).json();
+  } catch (err) {
+    res.status(500).json(err);
   }
-  res.render("newProject");
 });
 
 module.exports = router;
