@@ -5,15 +5,15 @@ const Project = require("./project");
 
 //1. Category-Product Association (One to Many)
 Category.hasMany(Product, {
-  // foreignKey: "category_id",
+  foreignKey: "category_id",
 });
 
 Product.belongsTo(Category, {
-  foreignKey: "cateogry_id",
+  foreignKey: "category_id",
 });
 
 //2. Product/Project Association (Many to Many)
-Product.belongsToMany(Project, {
+Product.belongsTo(Project, {
   foreignKey: "product_id",
 });
 Project.hasMany(Product, {
@@ -25,7 +25,6 @@ User.belongsToMany(Project, { through: "UserProject" });
 Project.belongsToMany(User, { through: "UserProject" });
 
 //4. Bid/Project Associations (One to Many)
-
 
 // // Define a Driver as having many Cars, thus creating a foreign key in the `car` table
 // Driver.hasMany(Car, {
