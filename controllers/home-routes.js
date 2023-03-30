@@ -29,9 +29,9 @@ router.get("/profile", withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     //TODO: go through and change what is needed such as Project
     const projectData = await Project.findAll({
-      where: {
-        user_id: req.session.user_id,
-      },
+      // where: {
+      //   user_id: req.session.user_id,
+      // },
     });
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
