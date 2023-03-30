@@ -7,7 +7,6 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   try {
     const categoryData = await Category.findAll({});
-    console.log(categoryData);
 
     // TODO: Serialize data so the template can read it
     const categories = categoryData.map((category) =>
@@ -17,7 +16,7 @@ router.get("/", async (req, res) => {
     // TODO: Pass serialized data and session flag into template
     res.render("homepage", {
       categories,
-      // logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -31,7 +30,7 @@ router.get("/profile", withAuth, async (req, res) => {
     //TODO: go through and change what is needed such as Project
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: User }],
+      // include: [{ model: User }],
     });
 
     const user = userData.get({ plain: true });
