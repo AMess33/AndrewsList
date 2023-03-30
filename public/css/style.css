@@ -1,36 +1,34 @@
-
-
 .bgImage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url('../../assets/images/kitchen.jpeg');
+  background-image: url('../images/kitchen.jpeg');
   background-size: cover;
   background-position: 50% 85%;
   width: 100%;
   height: 550px;
   object-fit: fill;
   z-index: 1;
-  }
+}
 
 .logo {
   background-color: rgb(98, 100, 98, .7);
   z-index: 2;
   width: 120px;
   height: 120px;
-} 
+}
 
- .logoOne {
+.logoOne {
   font-family: 'cursive';
-  font-size: 80px ;
+  font-size: 80px;
   color: blue;
   position: relative;
   z-index: 4;
   bottom: 15%;
   left: 10%;
- } 
+}
 
- .logoTwo {
+.logoTwo {
   font-family: 'cursive';
   font-size: 80px;
   color: rgb(21, 99, 223);
@@ -38,9 +36,9 @@
   z-index: 3;
   bottom: 110px;
   left: 50px;
- } 
+}
 
- .slogan {
+.slogan {
   justify-content: start;
   font-family: 'cursive';
   flex: 2 2 auto;
@@ -51,10 +49,10 @@
   /* position: absolute;
   top: 350px; */
   align-items: end;
- }
+}
 
-  li {
-    list-style-type: none;
-    justify-content: center;
-    padding: 0px 10px;
-  }
+li {
+  list-style-type: none;
+  justify-content: center;
+  padding: 0px 10px;
+}

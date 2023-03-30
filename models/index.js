@@ -1,8 +1,8 @@
 const User = require("./User");
-const Category = require("./Category");
-const Product = require("./Product");
-const Project = require("./Project");
-const Bid = require("./Bid");
+const Category = require("./category");
+const Product = require("./product");
+const Project = require("./project");
+const Bid = require("./bid");
 
 //1. Category-Product Association (One to Many)
 Category.hasMany(Product, {
@@ -10,7 +10,7 @@ Category.hasMany(Product, {
 });
 
 Product.belongsTo(Category, {
-  foreignKey: "cat",
+  foreignKey: "cateogry_id",
 });
 
 //2. Product/Project Association (Many to Many)

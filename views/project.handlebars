@@ -1,0 +1,16 @@
+<div class="col-6">
+    {{#each projects as |project|}}
+    <div class="card h-30 shadow-sm"> <img src="{{ product.filename }}" class="card-img-top " alt="...">
+        <div class="card-body">
+            <h4 class="card-title text-center">{{ project.Title }}</h4>
+            <h6 class="text-center">{{ project.description }}</h6>
+            <div class="text-center my-4">
+                <div>{{project.product}}</div>
+                <div>{{project.status}}</div>
+                <div> Expected Start Date {{Project.start_date}}</div>
+                <div> Expected Completion Date {{project.date_completion}}</div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

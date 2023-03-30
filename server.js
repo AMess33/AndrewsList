@@ -4,16 +4,20 @@ const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
-const helpers = require("./utils/helpers");
-
 const sequelize = require("./config/connection");
+const datepicker = require("js-datepicker");
+
+require("./seeds/seed");
+// const helpers = require("utils");
+
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
+// herokuapp url
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create();
 
 const sess = {
   secret: "Super secret secret",
@@ -33,7 +37,7 @@ const sess = {
 app.use(session(sess));
 
 // Add a static middleware for serving assets in the public folder
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
