@@ -24,9 +24,6 @@ const seedDatabase = async () => {
 
   const product = await Product.bulkCreate(productData);
 
-  const productProduct = await ProjectProduct();
-
-  const UserProject = await UserProject();
   process.exit(0);
 };
 
