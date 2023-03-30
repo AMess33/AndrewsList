@@ -13,7 +13,7 @@ const userData = require("./userData");
 // const contractorData = require("./contractorData.json");
 
 const seedDatabase = async () => {
-  // await sequelize.sync({ force: true });
+  await sequelize.sync({ force: true });
 
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
