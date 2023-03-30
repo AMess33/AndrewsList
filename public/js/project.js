@@ -1,5 +1,5 @@
 const newFormHandler = async (event) => {
-  event.preventDefault();
+  // event.preventDefault();
 
   const name = document.querySelector("#project-title").value.trim();
   const description = document.querySelector("#project-desc").value.trim();
@@ -10,7 +10,7 @@ const newFormHandler = async (event) => {
   const endDate = document.querySelector("endDate");
 
   if (name && description && product && startDate && endDate) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/project`, {
       method: "POST",
       body: JSON.stringify({ name, description, product, startDate, endDate }),
       headers: {
@@ -46,6 +46,6 @@ document
   .querySelector(".new-project-form")
   .addEventListener("submit", newFormHandler);
 
-document
-  .querySelector(".project-list")
-  .addEventListener("click", delButtonHandler);
+// document
+//   .querySelector(".project-list")
+//   .addEventListener("click", delButtonHandler);
