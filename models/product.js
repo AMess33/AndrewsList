@@ -34,6 +34,13 @@ Product.init(
         key: "id",
       },
     },
+    project_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "project",
+        key: "id",
+      },
+    },
     // TODO Add filename.
     filename: {
       type: DataTypes.STRING,
