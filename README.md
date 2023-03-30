@@ -4,6 +4,8 @@
 
 1.[Description and Purpose](#description)
 
+2.[User Story](#userStory)
+
 2.[Wireframes](#wireframes)
 
 3.[Installation](#installation)
@@ -20,12 +22,22 @@ Andrew's List is a web application that serves as a home improvement marketplace
 
 The application is intended to reduce the amount of time both clients and contractors spend finding each other and planning projects.
 
+## User Story
+
+AS a Homeowner with home improvement aspirations
+I WANT to be able to create a project, select products, and receive bids
+SO THAT changes to my living space are completed.
+AS a Contractor with business aspirations
+I WANT to be presented with open projects and quickly create accurate bids
+SO THAT I can complete projects for clients and grow my business.
+
 ## Wireframes
 
 ![ Wireframe 1 ](public/images/wirefames-client_view.PNG "Concept Views")
 ![ Wireframe 2 ](public/images/wirefames-client_view2.PNG "Concept Views")
 ![ Wireframe 3 ](public/images/wirefames-contractor_view.PNG "Concept Views")
 ![ Wireframe 4 ](public/images/wirefames-contractor_view2.PNG "Concept Views")
+![ Wireframe 4 ](public/images/home-page.PNG "Concept Views")
 
 ## Installation
 
