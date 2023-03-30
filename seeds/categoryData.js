@@ -9,7 +9,7 @@ const categoryData = [
   {
     name: "countertops",
     description: "Select the perfect countertops for you!",
-    filename: "images/countertop-examples.jpeg",
+    filename: "images/countertop-examples.webp",
   },
   {
     name: "cabinets",
