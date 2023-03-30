@@ -13,16 +13,19 @@ Product.belongsTo(Category, {
 });
 
 //2. Product/Project Association (Many to Many)
-Product.belongsToMany(Project, { through: "ProjectProduct" });
-Project.belongsToMany(Product, { through: "ProjectProduct" });
+Product.belongsToMany(Project, {
+  foreignKey: "product_id",
+});
+Project.hasMany(Product, {
+  foreignKey: "product_id",
+});
 
 //3. Project/User Associaiton (Many to Many)
 User.belongsToMany(Project, { through: "UserProject" });
 Project.belongsToMany(User, { through: "UserProject" });
 
 //4. Bid/Project Associations (One to Many)
-// Project.hasMany(Bid, {});
-// Bid.belongsTo(Project, {});
+
 
 // // Define a Driver as having many Cars, thus creating a foreign key in the `car` table
 // Driver.hasMany(Car, {
