@@ -7,7 +7,7 @@ const productData = [
     price: 3.56,
     availablity: true,
     category_id: 1,
-    filename: "images/timber-ridge-cocoa-oak",
+    filename: "/images/timber-ridge-cocoa-oak.jpg",
   },
   {
     name: "Brazilian Pecan",
@@ -15,7 +15,7 @@ const productData = [
     price: 2.38,
     availablity: true,
     category_id: 1,
-    filename: "images/brazilian-pecan",
+    filename: "/images/brazilian-pecan.jpg",
   },
   {
     name: "Great Lakes Hand Sculpted Maple",
@@ -23,7 +23,7 @@ const productData = [
     price: 3.2,
     availablity: true,
     category_id: 1,
-    filename: "images/great-lakes-maple",
+    filename: "/images/great-lakes-maple.jpg",
   },
   {
     name: "CustomCraft Countertops High Resolution Laminate Countertop",
@@ -32,7 +32,7 @@ const productData = [
     price: 62.29,
     availablity: true,
     category_id: 2,
-    filename: "images/laminate-countertop",
+    filename: "/images/laminate-countertop.jpg",
   },
   {
     name: "Butcher Block Birch Countertops",
@@ -41,7 +41,7 @@ const productData = [
     price: 106.79,
     availablity: true,
     category_id: 2,
-    filename: "images/butcher-block-countertop",
+    filename: "/images/butcher-block-countertop.jpg",
   },
   {
     name: "Kitchen Wall Cabinet",
@@ -50,7 +50,7 @@ const productData = [
     price: 48.94,
     availablity: true,
     category_id: 3,
-    filename: "images/kitchen-wall-cabinet",
+    filename: "/images/kitchen-wall-cabinet.jpg",
   },
   {
     name: "Great Lakes Hand Sculpted Maple",
@@ -59,7 +59,7 @@ const productData = [
     price: 64.97,
     availablity: true,
     category_id: 3,
-    filename: "images/over-appliance-cabinet",
+    filename: "/images/over-appliance-cabinet.jpg",
   },
 ];
 
