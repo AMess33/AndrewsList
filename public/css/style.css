@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url('../images/kitchen.jpeg');
+  background-image: url('/images/kitchen.jpeg');
   background-size: cover;
   background-position: 50% 85%;
   width: 100%;

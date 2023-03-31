@@ -6,21 +6,15 @@
 
 2.[User Story](#userStory)
 
-3.[Acceptance Criteria](#acceptanceCriteria)
+2.[Wireframes](#wireframes)
 
-4.[Wireframes and Mock-Ups](#mockups)
+3.[Installation](#installation)
 
-5.[Installation](#installation)
+4.[Usage](#usage)
 
-6.[Usage](#usage)
+5.[Contribution](#contribution)
 
-7.[Contribution](#contribution)
-
-8.[License](#license)
-
-9.[Questions](#questions)
-
-10.[Bonus](#Bonus)
+6.[Questions](#questions)
 
 ## Description
 
@@ -30,28 +24,33 @@ The application is intended to reduce the amount of time both clients and contra
 
 ## User Story
 
-## Acceptance Criteria
+AS a Homeowner with home improvement aspirations
+I WANT to be able to create a project, select products, and receive bids
+SO THAT changes to my living space are completed.
+AS a Contractor with business aspirations
+I WANT to be presented with open projects and quickly create accurate bids
+SO THAT I can complete projects for clients and grow my business.
 
-## Wireframes and Mock-Ups
+## Wireframes
+
+![ Wireframe 1 ](public/images/wirefames-client_view.PNG "Concept Views")
+![ Wireframe 2 ](public/images/wirefames-client_view2.PNG "Concept Views")
+![ Wireframe 3 ](public/images/wirefames-contractor_view.PNG "Concept Views")
+![ Wireframe 4 ](public/images/wirefames-contractor_view2.PNG "Concept Views")
+![ Wireframe 4 ](public/images/home-page.PNG "Concept Views")
 
 ## Installation
 
-You can install this application by forking the repository from github.com/alanhornbaker/AndrewsList and opening the repository in your text editor. You will also want the LTS version of NPM so the node works.
+You can find the deployed application at https://andrews-list.herokuapp.com/.
 
 ## Usage
 
-Functions that you will use to to use the application once you have installed it:
+You can use the application by opening a project for home improvement and selecting products that you would like use. Contractors will then offer bids for the job. If you would like to select a bid and start a project, reach out to the contractor via their email address.
 
 ## Contribution
 
-You can contribute to this application by opening a pull request at github.com/AMess33/AndrewsList. Currently there are no rules or standards for contribution.
-
-## License
-
-Some license
+You can contribute to this application by opening a pull request at github.com/AMess33/AndrewsList. Currently there are no rules or standards for contribution. Current contributers are Andrew Messer (github.com/AMess33), Eli Pruneda (github.com/Scorch87), and Alan Hornbaker (github.com/alanhornbaker).
 
 ## Questions
 
-Known erros and other issues can be raised to the repository on github at github.com/AMess33/AndrewsList , or can be sent to my github profile at github.com/AMess33. As last resort, questions can be emailed to me directly at alanhornbaker@gmail.com.
-
-## Bonus
+Known erros and other issues can be raised to the repository on github at github.com/AMess33/AndrewsList , or can be sent to the github profile at github.com/AMess33. As last resort, questions can be emailed to alanhornbaker@gmail.com.

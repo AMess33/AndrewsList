@@ -19,12 +19,13 @@ Product.init(
       type: DataTypes.STRING,
     },
     price: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(5, 2),
       allowNull: false,
     },
     availability: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      defaultValue: true,
     },
     category_id: {
       type: DataTypes.INTEGER,
@@ -32,6 +33,17 @@ Product.init(
         model: "category",
         key: "id",
       },
+    },
+    project_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "project",
+        key: "id",
+      },
+    },
+    // TODO Add filename.
+    filename: {
+      type: DataTypes.STRING,
     },
   },
 

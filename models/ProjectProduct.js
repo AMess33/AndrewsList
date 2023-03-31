@@ -11,9 +11,12 @@ ProjectProduct.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    projectName: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    project_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "project",
+        key: "id",
+      },
     },
   },
   {

@@ -5,12 +5,15 @@
             <div class="card h-100 shadow-md"> <img src="{{category.filename}}" class="card-img-top"
                     alt="{{category.name}}">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Select the right {{category.name}} style for you</h5>
-                    <div class="text-center my-4"> <a href="#products" class="btn btn-warning">View {{category.name}}
+                    <h5 class="card-title text-center">Select the right {{category.name}} for you</h5>
+                    <div class="text-center my-4"> <a href="api/categories/{{category.id}}/products"
+                            class="btn btn-warning">View
+                            {{category.name}}
                             Products</a>
                     </div>
                 </div>
             </div>
-            {{/each}}
         </div>
+        {{/each}}
     </div>
+</div>

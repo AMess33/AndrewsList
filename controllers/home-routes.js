@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Category, User } = require("../models");
+const { Category, User, Product, Project } = require("../models");
 const withAuth = require("../utils/auth");
 
 // homepage/landing page route
@@ -7,7 +7,6 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   try {
     const categoryData = await Category.findAll({});
-    console.log(categoryData);
 
     // TODO: Serialize data so the template can read it
     const categories = categoryData.map((category) =>
@@ -17,7 +16,7 @@ router.get("/", async (req, res) => {
     // TODO: Pass serialized data and session flag into template
     res.render("homepage", {
       categories,
-      // logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -29,15 +28,22 @@ router.get("/profile", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     //TODO: go through and change what is needed such as Project
+    const projectData = await Project.findAll({
+      // where: {
+      //   user_id: req.session.user_id,
+      // },
+    });
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: User }],
+      // include: [{ model: User }],
     });
 
     const user = userData.get({ plain: true });
+    const projects = projectData.map((project) => project.get({ plain: true }));
 
     res.render("profile", {
       ...user,
+      projects,
       logged_in: true,
     });
   } catch (err) {
@@ -55,6 +61,20 @@ router.get("/login", (req, res) => {
   }
 
   res.render("login");
+});
+
+// get Project Creation form route
+router.get("/newProject", withAuth, async (req, res) => {
+  try {
+    const productData = await Product.findAll({});
+    const products = productData.map((product) => product.get({ plain: true }));
+    res.render("newProject", {
+      products,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
