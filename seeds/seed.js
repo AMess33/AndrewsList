@@ -15,7 +15,6 @@ const seedDatabase = async () => {
   const category = await Category.bulkCreate(categoryData);
   const product = await Product.bulkCreate(productData);
   const project = await Project.bulkCreate(projectData);
-  process.exit(0);
 };
 
 module.exports = seedDatabase;
