@@ -24,17 +24,4 @@ Project.hasMany(Product, {
 User.belongsToMany(Project, { through: "UserProject" });
 Project.belongsToMany(User, { through: "UserProject" });
 
-//4. Bid/Project Associations (One to Many)
-
-// // Define a Driver as having many Cars, thus creating a foreign key in the `car` table
-// Driver.hasMany(Car, {
-//   foreignKey: "driver_id",
-//   onDelete: "CASCADE",
-// });
-
-// // The association can also be created from the Car side
-// Car.belongsTo(Driver, {
-//   foreignKey: "driver_id",
-// });
-
 module.exports = { User, Category, Product, Project };

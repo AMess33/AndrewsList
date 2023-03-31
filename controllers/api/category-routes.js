@@ -2,12 +2,6 @@ const router = require("express").Router();
 const { User, Project, Product, Category } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-// Products page: (after selecting a category by id)
-// ‘/’ display products, findall products by category id
-// ‘/startProject’ route to project creation with the product (autofill the form)
-
-// need a find all products
-
 // find product by id
 router.get("/:id/products", async (req, res) => {
   try {

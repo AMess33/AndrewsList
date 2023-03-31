@@ -41,7 +41,6 @@ Product.init(
         key: "id",
       },
     },
-    // TODO Add filename.
     filename: {
       type: DataTypes.STRING,
     },
