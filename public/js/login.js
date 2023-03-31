@@ -57,20 +57,20 @@ const signupFormHandler = async (event) => {
   }
 };
 
-function isContractor() {
-  // Get the checkbox
-  var checkBox = document.getElementById("contractorCheck");
-  // Get the buisness name
-  var company = document.getElementById("company");
-  // Get phone number
-  var phone = document.getElementById("phone");
+// function isContractor() {
+//   // Get the checkbox
+//   var checkBox = document.getElementById("contractorCheck");
+//   // Get the buisness name
+//   var company = document.getElementById("company");
+//   // Get phone number
+//   var phone = document.getElementById("phone");
 
-  // If the checkbox is checked, display the input boxes for company and phone number
-  if (checkBox.checked == true) {
-    company.style.display = "block";
-    phone.style.display = "block";
-  } else {
-    company.style.display = "none";
-    phone.style.display = "none";
-  }
-}
+//   // If the checkbox is checked, display the input boxes for company and phone number
+//   if (checkBox.checked == true) {
+//     company.style.display = "block";
+//     phone.style.display = "block";
+//   } else {
+//     company.style.display = "none";
+//     phone.style.display = "none";
+//   }
+// }
