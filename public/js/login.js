@@ -27,21 +27,21 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   // event.preventDefault();
 
-  const firstName = document.querySelector("#first-name-signup").value.trim();
-  const lastName = document.querySelector("#last-name-signup").value.trim();
+  const first_name = document.querySelector("#first-name-signup").value.trim();
+  const last_name = document.querySelector("#last-name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value;
   const contractor = document.querySelector("#contractorCheck").checked;
   // const buisness = document.querySelector("#business")
   // const phone = document.querySelector("#phone")
-  console.log(firstName, lastName, email, password, contractor);
+  console.log(first_name, last_name, email, password, contractor);
 
-  if (firstName && lastName) {
+  if (first_name && last_name) {
     const response = await fetch("/api/user", {
       method: "POST",
       body: JSON.stringify({
-        firstName,
-        lastName,
+        first_name,
+        last_name,
         email,
         password,
         contractor,
@@ -57,20 +57,20 @@ const signupFormHandler = async (event) => {
   }
 };
 
-function isContractor() {
-  // Get the checkbox
-  var checkBox = document.getElementById("contractorCheck");
-  // Get the buisness name
-  var company = document.getElementById("company");
-  // Get phone number
-  var phone = document.getElementById("phone");
+// function isContractor() {
+//   // Get the checkbox
+//   var checkBox = document.getElementById("contractorCheck");
+//   // Get the buisness name
+//   var company = document.getElementById("company");
+//   // Get phone number
+//   var phone = document.getElementById("phone");
 
-  // If the checkbox is checked, display the input boxes for company and phone number
-  if (checkBox.checked == true) {
-    company.style.display = "block";
-    phone.style.display = "block";
-  } else {
-    company.style.display = "none";
-    phone.style.display = "none";
-  }
-}
+//   // If the checkbox is checked, display the input boxes for company and phone number
+//   if (checkBox.checked == true) {
+//     company.style.display = "block";
+//     phone.style.display = "block";
+//   } else {
+//     company.style.display = "none";
+//     phone.style.display = "none";
+//   }
+// }

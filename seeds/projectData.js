@@ -9,7 +9,8 @@ const projectData = [
     date_completion: 2023 - 06 - 07,
     status: 1,
     user_id: 1,
+    contractor_id: 2,
   },
 ];
 
-module.exports = productData;
+module.exports = projectData;
