@@ -7,6 +7,8 @@ const userData = require("./userData");
 const projectData = require("./projectData");
 // const contractorData = require("./contractorData.json");
 
+const hasRecords = () => Category.count() > 0;
+
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
@@ -24,4 +26,6 @@ const seedDatabase = async () => {
   process.exit(0);
 };
 
-seedDatabase();
+if (!hasRecords()) {
+  seedDatabase();
+}
